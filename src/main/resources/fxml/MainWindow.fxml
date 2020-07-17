@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javaforall.ru.Controller.FXMLController">
+   <children>
+      <HBox alignment="TOP_CENTER" focusTraversable="true" prefHeight="94.0" prefWidth="600.0">
+         <children>
+            <Button fx:id="btn_add" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addContact" prefHeight="25.0" prefWidth="153.0" text="Добавить" textAlignment="CENTER" textFill="#eb770b">
+               <opaqueInsets>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </opaqueInsets>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btn_change" mnemonicParsing="false" onAction="#changeContact" prefHeight="25.0" prefWidth="156.0" text="Изменить" textAlignment="CENTER" textFill="#1aab1f">
+               <opaqueInsets>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btn_del" mnemonicParsing="false" onAction="#deleteContact" prefHeight="25.0" prefWidth="138.0" text="Удалить" textFill="#2253d0">
+               <opaqueInsets>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </Button>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <opaqueInsets>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </opaqueInsets>
+         <padding>
+            <Insets left="10.0" right="10.0" top="20.0" />
+         </padding>
+      </HBox>
+      <Pane prefHeight="56.0" prefWidth="600.0">
+         <children>
+            <TextField fx:id="fld_Find" layoutX="58.0" layoutY="2.0" prefHeight="25.0" prefWidth="335.0" />
+            <Button fx:id="btn_find" layoutX="408.0" layoutY="2.0" mnemonicParsing="false" onAction="#findContact" prefHeight="25.0" prefWidth="138.0" text="Поиск" />
+         </children>
+      </Pane>
+      <TableView fx:id="tbl_content" editable="true" prefHeight="200.0" prefWidth="600.0">
+        <columns>
+          <TableColumn fx:id="column_contact" prefWidth="173.0" text="Контакт" />
+            <TableColumn fx:id="column_number" prefWidth="216.0" text="Номер" />
+            <TableColumn fx:id="column_note" prefWidth="210.0" text="Примечание" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Label fx:id="lbl_cont" prefHeight="17.0" prefWidth="166.0" text="Количество контактов: ">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <VBox.margin>
+            <Insets bottom="10.0" left="40.0" right="10.0" top="20.0" />
+         </VBox.margin>
+      </Label>
+   </children>
+</VBox>
